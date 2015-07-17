@@ -3,7 +3,6 @@ parseString = require('xml2js').parseString
 xmlLite = require("node-xml-lite")
 
 
-
 exports.httpSync =
 
   objectify: (response)->
@@ -13,7 +12,6 @@ exports.httpSync =
 
   objectifyXml: (response)->
     body = response.body.toString('utf8')
-    console.log body
     object = xmlLite.parseString(body)
     return object
 
